@@ -7,7 +7,7 @@ export default function PaymentMethod({ guestData, bookingDetails, onPaymentSucc
 
   const saveBookingToBackend = async (paymentStatus) => {
     try {
-      const response = await fetch('http://localhost:3000/api/bookings', {
+      const response = await fetch('https://hoteldripinn-ktqfq56uo-swatis-projects-d5718665.vercel.app/api/bookings', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

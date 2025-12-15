@@ -27,8 +27,8 @@ export default function AdminDashboard() {
   const fetchData = async () => {
     try {
       const [bookingsRes, reviewsRes] = await Promise.all([
-        fetch('http://localhost:3000/api/admin/bookings'),
-        fetch('http://localhost:3000/api/admin/reviews')
+        fetch('https://hoteldripinn-ktqfq56uo-swatis-projects-d5718665.vercel.app/api/admin/bookings'),
+        fetch('https://hoteldripinn-ktqfq56uo-swatis-projects-d5718665.vercel.app/api/admin/reviews')
       ]);
 
       const bookingsData = await bookingsRes.json();
@@ -58,7 +58,7 @@ export default function AdminDashboard() {
 
   const updateBookingStatus = async (bookingId, newStatus) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/admin/bookings/${bookingId}`, {
+      const res = await fetch(`https://hoteldripinn-ktqfq56uo-swatis-projects-d5718665.vercel.app/api/admin/bookings/${bookingId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: newStatus })
@@ -74,7 +74,7 @@ export default function AdminDashboard() {
 
   const approveReview = async (reviewId) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/admin/reviews/${reviewId}`, {
+      const res = await fetch(`https://hoteldripinn-ktqfq56uo-swatis-projects-d5718665.vercel.app/api/admin/reviews/${reviewId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: 'approved' })
@@ -90,7 +90,7 @@ export default function AdminDashboard() {
 
   const rejectReview = async (reviewId) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/reviews/${reviewId}`, {
+      const res = await fetch(`https://hoteldripinn-ktqfq56uo-swatis-projects-d5718665.vercel.app/api/reviews/${reviewId}`, {
         method: 'DELETE'
       });
 

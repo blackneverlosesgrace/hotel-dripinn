@@ -9,7 +9,7 @@ export default defineConfig({
     allowedHosts: ['testaceous-insistently-terrilyn.ngrok-free.dev'],
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
+        target: 'https://hoteldripinn-ktqfq56uo-swatis-projects-d5718665.vercel.app',
         changeOrigin: true,
         secure: false,
       },
