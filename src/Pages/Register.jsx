@@ -38,7 +38,7 @@ export default function Register() {
     setLoading(true);
 
     try {
-      const res = await fetch('https://hoteldripinn-16vgzp4a5-swatis-projects-d5718665.vercel.app/api/auth/register', {
+      const res = await fetch('https://hoteldripinn-qcajs976t-swatis-projects-d5718665.vercel.app/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
