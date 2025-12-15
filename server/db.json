@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": "1765756020121",
+      "name": "Swati Srivastava",
+      "email": "contact.adxninja@gmail.com",
+      "phone": "09140818806",
+      "password": "test123",
+      "createdAt": "2025-12-14T23:47:00.121Z",
+      "role": "user"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "BK1765758402213",
+      "userId": "guest",
+      "roomId": "1",
+      "checkIn": "2025-12-15",
+      "checkOut": "2025-12-16",
+      "createdAt": "2025-12-15T00:26:42.213Z",
+      "status": "confirmed",
+      "paymentStatus": "pending"
+    },
+    {
+      "id": "BK1765758754855",
+      "userId": "guest",
+      "roomId": "1",
+      "checkIn": "2025-12-16",
+      "checkOut": "2025-12-17",
+      "createdAt": "2025-12-15T00:32:34.855Z",
+      "status": "confirmed",
+      "paymentStatus": "pending"
+    }
+  ],
+  "reviews": [],
+  "payments": [],
+  "blockedDates": []
+}

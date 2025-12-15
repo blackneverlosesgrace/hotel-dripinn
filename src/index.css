@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+  * { -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Montserrat', sans-serif; -webkit-font-smoothing: antialiased; }
+  h1 { @apply font-extrabold; }
+  h2, .section-heading { @apply font-bold; }
+  h3, .subheading { @apply font-medium; }
+  p, label, input, button { @apply font-normal; }
+  input, textarea { -webkit-appearance: none; appearance: none; border-radius: 6px; font-size: 16px; }
+  button { -webkit-appearance: none; appearance: none; }
+}
+
+:root {
+  --brand-green: #008080;
+  --brand-gold: #C2A327;
+}
+
+/* Brand utility fallbacks (for class names used in JSX) */
+.bg-brand-green { background-color: var(--brand-green) !important; }
+.text-brand-green { color: var(--brand-green) !important; }
+.border-brand-green { border-color: var(--brand-green) !important; }
+.bg-brand-gold { background-color: var(--brand-gold) !important; }
+.text-brand-gold { color: var(--brand-gold) !important; }
+
+/* Simple entrance animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeInUp { animation: fadeInUp 360ms ease both; }
+
+/* Card hover lift — desktop hover, mobile active */
+.card-hover { transition: transform .25s ease, box-shadow .25s ease; }
+.card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(2,6,23,0.12); }
+@media (max-width: 768px) {
+  .card-hover:active { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(2,6,23,0.1); }
+}
+
+/* Image zoom on hover — gentle on mobile */
+.img-zoom { overflow: hidden; display: block; }
+.img-zoom img { transition: transform .45s ease; display: block; }
+.img-zoom:hover img { transform: scale(1.06); }
+@media (max-width: 768px) {
+  .img-zoom:active img { transform: scale(1.03); }
+}
+
+/* Button micro-interaction — larger tap targets on mobile */
+.btn-animate { transition: transform .12s ease, box-shadow .12s ease; }
+.btn-animate:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(2,6,23,0.12); }
+@media (max-width: 768px) {
+  .btn-animate { min-height: 44px; display: flex; align-items: center; justify-content: center; }
+  .btn-animate:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(2,6,23,0.1); }
+}
+
+/* Smooth scrolling & safe area */
+@supports (padding: max(0px)) {
+  body { padding-left: max(0px, env(safe-area-inset-left)); padding-right: max(0px, env(safe-area-inset-right)); }
+}
+
