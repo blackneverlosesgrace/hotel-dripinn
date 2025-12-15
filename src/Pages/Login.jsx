@@ -20,7 +20,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await fetch('https://hoteldripinn-occk67r7h-swatis-projects-d5718665.vercel.app/api/auth/login', {
+      const res = await fetch('https://hoteldripinn-16vgzp4a5-swatis-projects-d5718665.vercel.app/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

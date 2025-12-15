@@ -15,7 +15,7 @@ export default function MyBookings() {
 
     const getBookings = async () => {
       try {
-        const res = await fetch(`https://hoteldripinn-occk67r7h-swatis-projects-d5718665.vercel.app/api/bookings/user/${user.id}`);
+        const res = await fetch(`https://hoteldripinn-16vgzp4a5-swatis-projects-d5718665.vercel.app/api/bookings/user/${user.id}`);
         const data = await res.json();
         setBookings(data);
       } catch (err) {
@@ -32,7 +32,7 @@ export default function MyBookings() {
     if (!window.confirm('Are you sure you want to cancel this booking?')) return;
 
     try {
-      const res = await fetch(`https://hoteldripinn-occk67r7h-swatis-projects-d5718665.vercel.app/api/bookings/${bookingId}/cancel`, {
+      const res = await fetch(`https://hoteldripinn-16vgzp4a5-swatis-projects-d5718665.vercel.app/api/bookings/${bookingId}/cancel`, {
         method: 'POST'
       });
       if (res.ok) {

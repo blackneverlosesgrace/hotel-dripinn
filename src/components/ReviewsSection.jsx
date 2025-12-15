@@ -11,7 +11,7 @@ export default function ReviewsSection({ roomId }) {
 
   const fetchReviews = useCallback(async () => {
     try {
-      const res = await fetch(`https://hoteldripinn-occk67r7h-swatis-projects-d5718665.vercel.app/api/reviews/room/${roomId}`);
+      const res = await fetch(`https://hoteldripinn-16vgzp4a5-swatis-projects-d5718665.vercel.app/api/reviews/room/${roomId}`);
       const data = await res.json();
       setReviews(data);
       
@@ -44,7 +44,7 @@ export default function ReviewsSection({ roomId }) {
 
     setSubmitting(true);
     try {
-      const res = await fetch('https://hoteldripinn-occk67r7h-swatis-projects-d5718665.vercel.app/api/reviews', {
+      const res = await fetch('https://hoteldripinn-16vgzp4a5-swatis-projects-d5718665.vercel.app/api/reviews', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
